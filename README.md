@@ -9,11 +9,10 @@ You should save the script in any directory you want, in order to do it executab
 You have to create a file in /etc/zabbix/zabbix_server.conf.d/ and add UserParameters:
 
 * You should save the script in any directory you want, do it executable from zabbix user using sudo.
-* You have to create a file in /etc/zabbix/zabbix_server.conf.d/ and add UserParameters:
-... UserParameter=gluster_volume_info[\*],sudo /path/gstatus_discovery.py $1 $2
-... UserParameter=gluster_storage_info[\*],sudo /path/gstatus_discovery.py $1
-... UserParameter=gluster_volume_info,sudo /path/gstatus_discovery.py
-* The last one shoud be import zabbix_template.xml in zabbix
+* install gstatus to your machines
+* Import zabbix_template.xml in zabbix server
+* add glusterfs.conf to your glusterfs nodes
+
 
 ### Examples executing script
 Giving no arguments
